@@ -2,6 +2,8 @@
 
 Good Greens is a small React app that queries the [Washington State Liqueur and Cannabis Control Board](https://data.lcb.wa.gov/) to look up details on cannabis producers, processors, transporters, and retail establishments. This information is all made publicly available by the state, but the manner in which they make it available makes to hard for a person to parse (but easy for a program). All data presented in this app comes from the Washington State Liqueur and Cannabis Control Board API and is not modified beyond presentation. 
 
+Good Greens is currently hosted on GitHub and can be viewed here: (https://pgooch.github.io/good-greens/).
+
 # Questions
 
 ### How about a version for liqueur licenses?
