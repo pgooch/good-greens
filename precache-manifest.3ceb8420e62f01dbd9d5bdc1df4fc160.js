@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/good-greens/static/css/1.6ac3962a.chunk.css"
   },
   {
-    "revision": "b4c8d30d8c15128cf7259a7c7f521c8b",
+    "revision": "2fbbda92dccb66377ad6e45dddba3138",
     "url": "/good-greens/index.html"
   }
 ];
