@@ -1,0 +1,37 @@
+{
+  "name": "good-green",
+  "version": "1.0.0",
+  "homepage": "/good-green/build/",
+  "private": true,
+  "dependencies": {
+    "ajv": "^6.6.2",
+    "bootstrap": "^4.2.1",
+    "node-sass": "^4.11.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-markdown": "^4.0.4",
+    "react-paginate": "git+https://git@github.com/pgooch/react-paginate.git",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-scroll-4": "^1.0.0-beta.2",
+    "react-scripts": "^2.1.2",
+    "react-scroll-manager": "^1.0.0",
+    "react-table": "^6.8.6",
+    "reactstrap": "^6.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,291 @@
+/*
+    Variables, imports, and site wide styles
+*/
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:400,500');
+$green: darken(#366336,3);
+$highlight-green: lighten(#366336,68);
+$green-dropshadow: 2px 2px 0px darken($green,25);
+$black-dropshadow: 2px 2px 0px lighten($green,75);
+body{
+    font-family: 'Raleway', sans-serif!important;
+}
+a{
+    color:$green;
+    &:hover{ color:$green; }
+    &:active{ color:$green; }
+    &:visited{ color:$green; }
+}
+// This is for the green buttons used on the forward/next and search (with special borders for the search)
+@mixin greenButtonStyles() {
+    font-family: 'Lobster', cursive;
+    letter-spacing: .05em;
+    border: 1px solid $green;
+    background-color: $green;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 0px 7px 0px 0px;
+    font-size: 20px;
+    font-weight: light;
+    color: white!important;
+    line-height: 20px;
+    cursor:pointer;
+    text-shadow: $green-dropshadow;
+    &:hover{
+        background-color: rgba(255,255,255,.25);
+        color: $green!important;
+        text-shadow: $black-dropshadow;
+    }
+    &:active{
+        background-color: $green;
+        color: white!important;
+        text-shadow: $green-dropshadow
+    }
+}
+
+/*
+    Navigation bar and contents
+*/
+nav.navbar {
+    background-color:$green;
+    .navbar-brand {
+        font-family: 'Lobster', cursive;
+        text-shadow: $green-dropshadow
+    }
+}
+
+/*
+    Also navigation related, pagination re-color
+*/
+.pagination{
+    margin-top:2em;
+    .page-link{
+        color: $green;
+        &:hover{
+            color:$green;
+        }
+    }
+    .page-item.active .page-link {
+        background-color: $green;
+        border-color: $green;
+    }
+    &.hidden{
+        display: none;
+    }
+}
+
+
+/*
+	The homepage search bar
+*/
+#main-search-form{
+	margin-top:1em;
+	margin-bottom:1em;
+    > input{
+        border: 1px solid $green;
+        background-color: rgba(255,255,255,.25);
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        padding: 5px 15px;
+        font-size: 20px;
+        color: $green!important;
+        line-height: 20px;
+    }
+    > button{
+        @include greenButtonStyles
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left:none;
+    }
+}
+/* When the screen gets to small they stack, restyle them so they look nice stacked */
+@media (max-width: 575px) {
+	#main-search-form{
+		margin-left:1em;
+		margin-right:1em;
+	}
+	#main-search-form > input{
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	    padding: 10px;
+	}
+	#main-search-form > button{
+		border-top-right-radius:0;
+		border-top-left-radius:0;
+		border-bottom-left-radius:10px;
+		border-bottom-right-radius:10px;
+		border-left:1px solid green;
+		border-top:none;
+	    padding: 10px;
+	}
+}
+
+/*
+    Search Message Styles and similars (used for notices and such as well, big and centered)
+*/
+.search-message,.no-visit-message,.visit-violation-summary{
+    padding:.25em .75em 1em .75em;
+    font-size: 22px;
+    text-align: center;
+    .searching{
+        font-style: italic;
+    }
+}
+.no-visit-message,.visit-violation-summary{
+    text-align: left;
+}
+
+/*
+    Search Results Styles
+*/
+.search-result{
+    &:hover{
+        background-color: $highlight-green;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+        &:hover{
+            color: $green;
+            text-decoration: none;
+            use.type-icon{
+                stroke: $green;
+            }
+            use.tier-number{
+                fill: $green;
+            }
+        }
+        use.type-icon{
+            stroke: black;
+            fill: white;
+        }
+        use.tier-number{
+            font-family: 'Lobster', cursive;
+            paint-order: stroke;
+            stroke: white;
+            stroke-width: 5;
+            fill: black;
+            font-size: 42px;
+        }
+    }
+    h4{
+        display: inline;
+        line-height: 1.75;
+    }
+    h5{
+        display: inline;
+        padding-left:.5em;
+        font-style: italic;
+    }
+    address{
+        margin-bottom: .25em;
+    }
+    svg {
+        width: 3.75em;
+        height: 3.75em;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0px 0px 0px 5px;
+        stroke-width: 1.75;
+        padding-top: .5em;
+        margin-bottom:0px;
+    }
+    .violations{
+        font-family: 'Lobster', cursive;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: -10px;
+        line-height: 35px;
+        margin-top: 5px;
+        i{
+            font-size: 16px;
+            font-style: normal;
+            font-family: 'Raleway', sans-serif;
+            display:block;
+        }
+    }
+}
+
+/*
+    Footer Styles
+*/
+#footer{
+    margin: 2em auto 5em auto;
+    font-size: .9em;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+/*
+    Page styles of various types, starting with details
+*/
+table.table .date{
+    white-space: nowrap;
+}
+h1.fancy,h2.fancy,h3.fancy,h4.fancy,h5.fancy,h6.fancy{
+    font-family: 'Lobster', cursive;
+    color: $green;
+    margin-top:.75em;
+}
+.readme-markdown{
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'Lobster', cursive;
+        color: $green;
+        margin-top:.75em;
+    }
+}
+p, li{
+    font-size: 18px;
+}
+.lic-orgname > h1{
+    margin: .25em 0em;
+    padding: 0;
+}
+.lic-details{
+    margin: -.25em .5em -.25em .5em;
+    > div{
+        padding:.25em;
+    }
+}
+.combine-link{
+    margin-top:.75em;
+    text-align: right;
+}
+.btn-outline-primary{
+    border-color: $green!important;
+    color: $green!important;
+    &:hover{
+        color: white!important;
+        background-color: $green;
+    }
+    &:active{
+        color: white!important;
+        background-color: $green!important;
+    }
+}
+.license-traversal-btn{
+    .not-a-btn{
+        margin:1em -1px 0px;
+        vertical-align: bottom;
+        border-top:1px solid $green;
+        border-bottom: 1px solid $green;
+        color:$green;
+        border-radius:unset;
+    }
+    #lic-back-b{
+        border-top-right-radius:0;
+        border-bottom-right-radius:0;
+    }
+    #lic-forward-b{
+        border-top-left-radius:0;
+        border-bottom-left-radius:0;
+    }
+}
+.naughty-note{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
