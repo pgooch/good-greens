@@ -20,7 +20,7 @@ Occasionally the state will conduct random testing on products, which usually is
 
 # Improvements
 There are things that I'd like to change in the app, but I also have other projects I'd like to dive into. These are some of the things I would like to add, if I ever come back to this projects (or you would like to fork it and work on it) these are probably good starting places.
-- Change to the has router so github pages doens't break.
+- Change to the hash router so github pages doens't break.
 - Combine similar licenses in the naughty list
 - Add a filter for violation to the naughty list (consider the weirdness in WAC codes and descriptions)
 - Make it possible to combine multiple seemingly unrelated licenses together on a single view (it works with comma separated license numbers, but something to make that more interaction friendly)
